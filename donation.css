@@ -1,0 +1,17 @@
+.donation-dialog {
+  width: min(420px, calc(100vw - 32px)); max-width: 420px;
+  max-height: calc(100dvh - 32px); box-sizing: border-box;
+  padding: 38px 28px 44px; text-align: center; overflow: auto;
+  border-radius: 20px;
+}
+.donation-brand { display: block; width: 200px; max-width: calc(100% - 40px); height: auto; margin: 0 auto 20px; }
+.donation-dialog p { font-size: 14px; line-height: 1.3; color: var(--muted); margin: 0 0 16px; }
+.donation-dialog .donation-open { max-width: 100%; margin: 2px auto 16px; color: var(--accent); white-space: normal; }
+.donation-button-label { display: inline-flex; gap: 8px; align-items: center; justify-content: center; transform: translateX(4px); }
+.donation-dialog .donation-camera { margin-top: 24px; margin-bottom: 14px; }
+.donation-qr { display: block; width: min(100%,246px); height: auto; margin: 0 auto; background: white; image-rendering: pixelated; }
+.donation-dialog .legal-close-form { display: block; position: absolute; top: 10px; right: 10px; width: 36px; height: 36px; margin: 0; padding: 0; }
+.donation-dialog .legal-close { display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 0; border-radius: 50%; line-height: 1; }
+.donation-dialog .legal-close svg { display: block; width: 14px; height: 14px; }
+.feedback-service-note { font-size: 14px; line-height: 1.4; color: var(--muted); }
+@media(max-width:360px) { .donation-dialog { padding-inline: 20px; } }

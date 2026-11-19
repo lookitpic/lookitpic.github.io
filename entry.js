@@ -1,0 +1,1 @@
+(() => {const langs=['ru','en','de','fr'];let lang='';try{lang=localStorage.getItem('gallerist-language')||'';}catch{}if(!langs.includes(lang))lang=(navigator.languages||[navigator.language]).map(x=>x.split('-')[0]).find(x=>langs.includes(x))||'en';location.replace('/'+lang+'/'+location.search+location.hash);})();

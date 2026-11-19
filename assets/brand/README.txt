@@ -1,0 +1,1 @@
+LookitPic artwork 1.7.116. Vector reconstruction from the supplied PNG brand board. Rounded wordmark glyphs are authored SVG paths, not an extracted original font. Same SVG is embedded in src/brand_art.h and used by the site. Dark icon #1F1F22, lime #C5FF3D, bracket stroke 19 with explicit gaps. No external fonts or network dependencies.
