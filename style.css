@@ -247,3 +247,6 @@
 
 #feedback.feedback-sent{width:min(380px,calc(100% - 32px));padding:44px 24px 36px}#feedback .feedback-confirmation{margin:0;font-size:16px;line-height:1.5;white-space:pre-line;text-align:center;color:var(--text)}#feedback .feedback-close{top:4px;right:4px;width:32px;height:32px;padding:0;display:grid;place-items:center;line-height:1}#feedback .feedback-close svg{display:block}
 .grecaptcha-badge{visibility:hidden}#feedback .captcha-notice{margin:0;font-size:11px;line-height:1.5;color:var(--muted)}#feedback .captcha-notice a{text-decoration:underline;text-underline-offset:2px}
+
+/* First-launch notice: brighter text, unchanged layout. */
+.about .download-notes .windows-note{color:#e1e5eb}
