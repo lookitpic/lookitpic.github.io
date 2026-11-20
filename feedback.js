@@ -21,6 +21,20 @@
     if(!ready)show(text.unavailable);
   });
   close.addEventListener('click',()=>dialog.close());
+  // A drag starting inside the form must not dismiss it on release outside.
+  let backdropPress=false;
+  const outside=event=>{
+    const rect=dialog.getBoundingClientRect();
+    return event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom;
+  };
+  dialog.addEventListener('pointerdown',event=>{
+    backdropPress=event.target===dialog&&outside(event);
+  });
+  dialog.addEventListener('pointercancel',()=>{backdropPress=false;});
+  dialog.addEventListener('click',event=>{
+    if(backdropPress&&event.target===dialog&&outside(event))dialog.close();
+    backdropPress=false;
+  });
   message.addEventListener('input',()=>message.setCustomValidity(''));
   form.addEventListener('submit',event=>{
     if(!ready||busy){event.preventDefault();if(!ready)show(text.unavailable);return;}
