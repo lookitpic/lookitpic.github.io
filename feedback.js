@@ -34,7 +34,7 @@
     if(window.grecaptcha){execute();return;}
     if(captchaScript)captchaScript.remove();
     captchaScript=document.createElement('script');
-    captchaScript.src='https://www.google.com/recaptcha/api.js?render='+siteKey;
+    captchaScript.src='https://www.recaptcha.net/recaptcha/api.js?render='+siteKey;
     captchaScript.async=true;
     captchaScript.onload=execute;
     captchaScript.onerror=()=>finish(new Error('CAPTCHA load failed'));
