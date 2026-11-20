@@ -250,3 +250,7 @@
 
 /* First-launch notice: brighter text, unchanged layout. */
 .about .download-notes .windows-note{color:#e1e5eb}
+
+/* Header language control: outline only; keep the popup readable. */
+#language{background:transparent}
+#language option{background:#1f1f22;color:#f5f6f7}

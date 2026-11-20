@@ -1,10 +1,10 @@
 LookitPic 1.7.135 — сторонние компоненты / Third-party components
 
-В ZIP входят Lookit.exe, THIRD_PARTY_LICENSES.txt и это уведомление.
+В ZIP входят Lookit.exe, README.txt, THIRD_PARTY_LICENSES.txt и это уведомление.
 Для запуска нужен Lookit.exe. При передаче программы сохраняйте лицензии
 и уведомления вместе с ней.
 
-The ZIP contains Lookit.exe, THIRD_PARTY_LICENSES.txt and this notice.
+The ZIP contains Lookit.exe, README.txt, THIRD_PARTY_LICENSES.txt and this notice.
 Run Lookit.exe to start the application. Keep the licences and notices
 with the application when redistributing it.
 
