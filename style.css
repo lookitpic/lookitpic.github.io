@@ -241,5 +241,6 @@
 
 #donate-link[hidden]{display:none!important}
 
+/* Modal dialogs have opposing insets: fit-content prevents auto height from stretching. */
 /* Preserve introduction offset after removing the 32.5px heading and its 12px margin. */
-#feedback{height:auto;min-height:0;padding:68.5px 28px 60px}#feedback .feedback-pending{font-size:15px;margin:0 0 30px;line-height:1.5}#feedback-form{gap:14px}#feedback-status{margin:0}#feedback-status:empty{display:none}
+#feedback{height:fit-content;min-height:0;padding:68.5px 28px 60px}#feedback .feedback-pending{font-size:15px;margin:0 0 30px;line-height:1.5}#feedback-form{gap:14px}#feedback-status{margin:0}#feedback-status:empty{display:none}
