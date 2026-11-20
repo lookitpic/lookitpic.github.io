@@ -110,7 +110,7 @@
       }
       // Only a successful server response may clear the message and show thanks.
       sent=true;form.reset();form.hidden=true;intro.hidden=true;status.textContent='';
-      confirmation.textContent=copy.success;confirmation.hidden=false;
+      confirmation.textContent=text.success;confirmation.hidden=false;
       dialog.classList.add('feedback-sent');
       if(dialog.open)confirmation.focus();
     }catch(error){

@@ -246,3 +246,4 @@
 #feedback{height:fit-content;min-height:0;padding:68.5px 28px 60px}#feedback .feedback-pending{font-size:15px;margin:0 0 30px;line-height:1.5}#feedback-form{gap:14px}#feedback-status{margin:0}#feedback-status:empty{display:none}
 
 #feedback.feedback-sent{padding:68.5px 28px 60px}#feedback .feedback-confirmation{margin:0;font-size:18px;line-height:1.5;text-align:center;color:var(--text)}
+.grecaptcha-badge{visibility:hidden}#feedback .captcha-notice{margin:0;font-size:11px;line-height:1.5;color:var(--muted)}#feedback .captcha-notice a{text-decoration:underline;text-underline-offset:2px}
