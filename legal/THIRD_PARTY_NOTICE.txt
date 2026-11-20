@@ -1,25 +1,40 @@
-﻿LookitPic 1.7.116 — сторонние компоненты
+LookitPic 1.7.135 — сторонние компоненты / Third-party components
+
+В ZIP входят Lookit.exe, THIRD_PARTY_LICENSES.txt и это уведомление.
+Для запуска нужен Lookit.exe. При передаче программы сохраняйте лицензии
+и уведомления вместе с ней.
+
+The ZIP contains Lookit.exe, THIRD_PARTY_LICENSES.txt and this notice.
+Run Lookit.exe to start the application. Keep the licences and notices
+with the application when redistributing it.
+
+Copyright notices and licence texts are in THIRD_PARTY_LICENSES.txt.
+Copies are also embedded in the executable.
 
 libjxl 0.12.0: BSD-3-Clause. Brotli: MIT. Highway: Apache-2.0.
-Тексты лицензий, уведомления об авторских правах и условия прочих
-компонентов находятся в THIRD_PARTY_LICENSES.txt. Они также встроены в EXE.
-Источник официальной сборки JPEG XL:
+Official JPEG XL binaries:
 https://github.com/libjxl/libjxl/releases/tag/v0.12.0
 
-libheif 1.23.7 и libde265 1.1.3 используются по GNU LGPL v3.
-Исходники этих библиотек, AOM и исходный рецепт их сборки приложены
-в LGPL_SOURCES.zip. Их лицензии распространяются на соответствующие
-компоненты, а не автоматически на весь код просмотрщика.
+libheif 1.23.7 and libde265 1.1.3 are used under GNU LGPL v3.
+The accompanying licence file includes the GNU GPL and LGPL texts.
+Sources for these libraries, AOM and the build recipe are provided
+separately, free of charge, in LGPL_SOURCES.zip for this release:
+https://github.com/lookitpic/LookitPic/releases/download/v1.7.135/LGPL_SOURCES.zip
+Release page (licences, sources and application downloads):
+https://github.com/lookitpic/LookitPic/releases/tag/v1.7.135
 
-Можно заменить библиотеки, поместив совместимые libheif.dll и libde265.dll
-в папку codecs рядом с LookitPic.exe. Аналогично заменяемы DLL JPEG XL.
-Изменение LGPL-компонентов для собственного использования и обратная
-разработка приложения для отладки таких изменений не запрещаются.
+These licences apply to their respective components; they do not
+automatically apply to all of the viewer's application code.
+Compatible replacement libheif.dll and libde265.dll can be placed in
+a codecs directory alongside Lookit.exe. JPEG XL DLLs are replaceable
+in the same way. Modification of LGPL components for your own use and
+reverse engineering to debug such modifications are not prohibited.
+When redistributing LGPL components, preserve the required notices,
+licences and access to corresponding sources under their licence terms.
 
-JPEG XL использует системный Microsoft Visual C++ Runtime x64.
-Он не входит в данный архив. При отсутствии runtime установите официальный
-Microsoft Visual C++ Redistributable x64:
+JPEG XL requires the Microsoft Visual C++ Runtime x64, which is not
+included in this ZIP. Official runtime download:
 https://aka.ms/vs/17/release/vc_redist.x64.exe
 
-Бесплатность распространения не отменяет условия лицензий.
-При передаче программы сохраняйте приложенные лицензии и исходники LGPL.
+Бесплатное распространение не отменяет условий лицензий компонентов.
+Free distribution does not remove the components' licence obligations.
