@@ -1,4 +1,4 @@
-LookitPic 1.7.135 — сторонние компоненты / Third-party components
+LookitPic 1.7.137 — сторонние компоненты / Third-party components
 
 В ZIP входят Lookit.exe, README.txt, THIRD_PARTY_LICENSES.txt и это уведомление.
 Для запуска нужен Lookit.exe. При передаче программы сохраняйте лицензии
@@ -19,9 +19,9 @@ libheif 1.23.7 and libde265 1.1.3 are used under GNU LGPL v3.
 The accompanying licence file includes the GNU GPL and LGPL texts.
 Sources for these libraries, AOM and the build recipe are provided
 separately, free of charge, in LGPL_SOURCES.zip for this release:
-https://github.com/lookitpic/LookitPic/releases/download/v1.7.135/LGPL_SOURCES.zip
+https://github.com/lookitpic/LookitPic/releases/download/v1.7.137/LGPL_SOURCES.zip
 Release page (licences, sources and application downloads):
-https://github.com/lookitpic/LookitPic/releases/tag/v1.7.135
+https://github.com/lookitpic/LookitPic/releases/tag/v1.7.137
 
 These licences apply to their respective components; they do not
 automatically apply to all of the viewer's application code.

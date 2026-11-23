@@ -1,6 +1,5 @@
 (() => {
   'use strict';
-  if (document.documentElement.lang !== 'ru') return;
   const trigger = document.getElementById('donate-link');
   const dialog = document.getElementById('donation-dialog');
   if (!trigger || !dialog || typeof dialog.showModal !== 'function') return;
