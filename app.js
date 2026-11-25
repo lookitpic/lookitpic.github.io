@@ -8,7 +8,7 @@
   let language = supported.includes(document.documentElement.lang) ? document.documentElement.lang : 'en';
   let background = 4, thumbnails = true, shadow = true, generation = 0;
   const pickerWidths = {ru:256,en:198,de:226,fr:229};
-  const capture = name => `/assets/captures/${language}-${name}.webp`;
+  const capture = name => `/assets/captures/${language}-${name}.webp${name==='background-settings'?'?v=184':''}`;
   const preload = src => new Promise((resolve,reject) => {const img = new Image();img.onload=resolve;img.onerror=reject;img.src=src;});
   function updateDonation() {
     const link=get('donate-link');
