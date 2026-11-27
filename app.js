@@ -50,7 +50,7 @@
   function setLanguage(value) {
     language=supported.includes(value)?value:'en';
     const ui=window.DEMO_LOCALES[language];
-    document.documentElement.lang=language;get('language').value=language;
+    document.documentElement.lang=language;
     // Text and search metadata are already rendered in the language HTML.
     document.querySelector('.look').setAttribute('aria-label',ui.viewer);
     document.querySelector('.footer>a').setAttribute('aria-label',ui.top);
@@ -61,11 +61,21 @@
   document.querySelectorAll('.picker-hit').forEach(button=>button.addEventListener('click',()=>{background=Number(button.dataset.background);renderDemo();}));
   get('toggle-thumbnails').addEventListener('click',()=>{thumbnails=!thumbnails;renderDemo();});
   get('toggle-shadow').addEventListener('click',()=>{shadow=!shadow;renderDemo();});
-  get('language').addEventListener('change',event=>{
-    const selected=event.target.value;
-    if(!supported.includes(selected))return;
-    try {localStorage.setItem('gallerist-language',selected);} catch (_) {}
-    location.assign(`/${selected}/${location.hash}`);
+  const picker=get('language');
+  for(const link of picker.querySelectorAll('a[hreflang]')){
+    link.addEventListener('click',()=>{
+      link.hash=location.hash;
+      try {localStorage.setItem('gallerist-language',link.hreflang);} catch (_) {}
+    });
+  }
+  document.addEventListener('click',event=>{
+    if(picker.open&&!picker.contains(event.target))picker.open=false;
+  });
+  picker.addEventListener('keydown',event=>{
+    if(event.key==='Escape'&&picker.open){
+      picker.open=false;
+      picker.querySelector('summary').focus();
+    }
   });
   setLanguage(language);
 })();

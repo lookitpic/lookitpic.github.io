@@ -10,7 +10,7 @@
 @media(max-width:600px){.promo-desktop{aspect-ratio:1.2;border-radius:8px}.promo-window{left:14%;right:3%;top:23%;bottom:8%;grid-template-rows:minmax(0,1fr) 7cqw 5cqw}.promo-picture{max-width:55%;width:auto}.explorer-folders{top:28%;gap:10cqw 4cqw}.promo-options{gap:8px}.promo-options .background-choice{font-size:11px;min-height:40px}.promo-options .background-options{gap:4px}.promo-filename{font-size:1.2cqw}.promo-titlebar{font-size:2.5cqw}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 .download-row{margin-top:48px}
-.header{gap:25px}.header nav{margin-left:auto}.language-control{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}.language-label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}#language{font:inherit;color:var(--text);background:#252c36;border:1px solid #ffffff38;border-radius:18px;padding:8px 12px;cursor:pointer}#language:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.header{gap:25px}.header nav{margin-left:auto}.language-control{position:relative;font-size:12px;color:var(--muted)}
 .promo-desktop{aspect-ratio:1.32}.native-viewer{position:absolute;left:21%;top:20%;width:75%;aspect-ratio:1079/791;border-radius:1.15cqw;box-shadow:0 .7cqw 2.3cqw #0005;isolation:isolate}#viewer-shot{display:block;width:100%;height:100%;border-radius:inherit;user-select:none}.native-picker{position:absolute;left:4.4486%;bottom:6.4475%;width:23.7257%;aspect-ratio:256/222;border-radius:.9cqw;overflow:hidden;box-shadow:0 .4cqw 1.2cqw #0005}#picker-shot{display:block;width:100%;height:auto}.capture-hit{position:absolute;padding:0;margin:0;background:transparent;border:0;border-radius:6px;cursor:pointer;color:transparent;touch-action:manipulation}.capture-hit:hover{background:#ffffff12}.capture-hit:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}.picker-hit{left:2%;width:96%;height:18.9189%}.picker-hit:nth-of-type(1){top:2.7027%}.picker-hit:nth-of-type(2){top:21.6216%}.picker-hit:nth-of-type(3){top:40.5405%}.picker-hit:nth-of-type(4){top:59.4595%}.picker-hit:nth-of-type(5){top:78.3784%}.toolbar-hit{top:94.311%;width:3.3364%;height:4.5512%;border-radius:50%}#toggle-thumbnails{left:.7414%}#toggle-shadow{left:8.1557%}.demo-hint{color:var(--muted);font-size:13px;line-height:1.7;margin:20px 0 0;max-width:800px}.demo-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .about{display:block}.about-intro{max-width:720px;margin-bottom:40px}.about-intro p+p{margin-top:18px}.settings-row{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:45px;align-items:center;margin-top:35px}.settings-capture{margin:0;min-width:0}.settings-capture img{display:block;width:100%;height:auto;border-radius:12px}.settings-capture figcaption{font-size:12px;color:var(--dim);margin-top:12px}.animation-row{margin-top:55px}.animation-row .settings-capture{width:min(100%,390px);justify-self:center}.about .no-pressure{margin-top:28px;color:var(--text)}
 @media(max-width:760px){.header{gap:12px;flex-wrap:wrap;height:auto;min-height:90px;padding-block:18px}.header nav{gap:14px}.language-control{font-size:11px}.download-row{margin-top:40px}.settings-row{grid-template-columns:1fr;gap:22px;margin-top:32px}.animation-row .settings-capture{justify-self:start}.settings-capture{max-width:650px}.promo-desktop{aspect-ratio:1.32}.native-viewer{left:15%;width:82%;top:17%}.demo-hint{font-size:12px}}
@@ -146,7 +146,7 @@
 .explorer-label.heading,.explorer-label.status{color:#a8c1df}
 
 /* LookitPic identity, supplied brand board 2026-11-15. */
-.brand{gap:10px}.brand-name{font-family:"Arial Rounded MT Bold","Trebuchet MS",sans-serif;font-weight:800;font-size:28px;letter-spacing:-1px;color:#f5f6f7}.brand-pic{color:#c5ff3d}.brand img{width:38px;height:38px}#language{background:#3a3a3a}@media(max-width:760px){.brand-name{font-size:24px}.brand img{width:32px;height:32px}}
+.brand{gap:10px}.brand-name{font-family:"Arial Rounded MT Bold","Trebuchet MS",sans-serif;font-weight:800;font-size:28px;letter-spacing:-1px;color:#f5f6f7}.brand-pic{color:#c5ff3d}.brand img{width:38px;height:38px}@media(max-width:760px){.brand-name{font-size:24px}.brand img{width:32px;height:32px}}
 
 .thanks #donate-link{display:flex;width:fit-content;max-width:100%;margin:47px 0 51px}#donate-link[aria-disabled="true"]{cursor:default}
 
@@ -235,9 +235,8 @@
   .hero-download .file-note{grid-column:1;grid-row:2}
   .hero-download .version-note{grid-column:1;grid-row:3}
 }
-/* Crawlable language links also work with JavaScript disabled. */
-.language-links{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;padding:4px 0 26px;font-size:12px;color:#999}
-.language-links a{color:inherit;text-decoration:none}.language-links a:hover,.language-links a[aria-current="page"]{color:#c9d97b}
+
+
 
 #donate-link[hidden]{display:none!important}
 
@@ -251,6 +250,20 @@
 /* First-launch notice: brighter text, unchanged layout. */
 .about .download-notes .windows-note{color:#e1e5eb}
 
-/* Header language control: outline only; keep the popup readable. */
-#language{background:transparent}
-#language option{background:#1f1f22;color:#f5f6f7}
+.language-control summary{
+  box-sizing:border-box; display:flex; align-items:center; justify-content:center; gap:3px;
+  min-width:calc(3.25rem + 10px); padding:8px; border:1px solid #ffffff38; border-radius:18px;
+  color:var(--text); cursor:pointer; list-style:none;
+}
+.language-control summary::-webkit-details-marker{display:none}
+.language-control summary::after{
+  content:""; width:8px; height:5px; flex:none; background:currentColor;
+  clip-path:polygon(0 22%,14% 0,50% 58%,86% 0,100% 22%,50% 100%);
+}
+.language-control summary:focus-visible,.language-options a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.language-options{
+  position:absolute; z-index:10; top:calc(100% + 4px); right:0; width:max-content;
+  padding:4px; border:1px solid #ffffff38; border-radius:10px; background:#1f1f22;
+}
+.language-options a{display:block; padding:6px 12px; color:var(--text); text-decoration:none}
+.language-options a:hover,.language-options a[aria-current="page"]{color:var(--accent)}
